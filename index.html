@@ -65,13 +65,13 @@
           <button class="section1_button">See more details</button>
         </div>
         <div class="section1_block2">
-          <img src="/image/prop.svg" alt="prop" />
+          <img src="image/prop.svg" alt="prop" />
         </div>
       </section>
 
       <section class="section2">
         <div class="section2_block1">
-          <img src="/image/surfATM1.jpg" alt="Coffee Shop" />
+          <img src="image/surfATM1.jpg" alt="Coffee Shop" />
         </div>
         <div class="section2_block2">
           <h2>Support at every stage</h2>
@@ -113,7 +113,7 @@
 
       <section class="section4">
         <div class="section4_block1">
-          <img src="/image/prop.svg" alt="prop" />
+          <img src="image/prop.svg" alt="prop" />
         </div>
         <div class="section4_block2">
           <h2>Submit a request to open a Surf Coffee company</h2>
@@ -130,12 +130,12 @@
     <footer>
       <p>&copy; Surf Coffee</p>
       <div class="social-icons">
-        <img src="/image/instagram.svg" alt="Instagram" />
-        <img src="/image/linkedin.svg" alt="linkedin" />
-        <img src="/image/telegram.svg" alt="Twitter" />
-        <img src="/image/tiktok.svg" alt="TikTok" />
-        <img src="/image/whatsapp.svg" alt="whatsapp" />
-        <img src="/image/youtube.svg" alt="Youtube" />
+        <img src="image/instagram.svg" alt="Instagram" />
+        <img src="image/linkedin.svg" alt="linkedin" />
+        <img src="image/telegram.svg" alt="Twitter" />
+        <img src="image/tiktok.svg" alt="TikTok" />
+        <img src="image/whatsapp.svg" alt="whatsapp" />
+        <img src="image/youtube.svg" alt="Youtube" />
       </div>
     </footer>
     <script>
@@ -145,44 +145,40 @@
       const burgerNav = document.querySelector(".burger-nav");
       const desktopNav = document.querySelector(".desktop-nav");
 
-      // Функция для управления видимостью бургер-меню
       function toggleMenu() {
         const isVisible = burgerNav.classList.contains("active");
 
         if (isVisible) {
           burgerNav.classList.remove("active");
-          burgerNav.style.display = "none"; // Скрыть меню
-          burgerOpen.style.display = "block"; // Показать иконку открытия
-          burgerClose.style.display = "none"; // Скрыть иконку закрытия
+          burgerNav.style.display = "none";
+          burgerOpen.style.display = "block";
+          burgerClose.style.display = "none";
         } else {
           burgerNav.classList.add("active");
-          burgerNav.style.display = "block"; // Показать меню
-          burgerOpen.style.display = "none"; // Скрыть иконку открытия
-          burgerClose.style.display = "block"; // Показать иконку закрытия
+          burgerNav.style.display = "block";
+          burgerOpen.style.display = "none";
+          burgerClose.style.display = "block";
         }
       }
 
-      // Функция для управления отображением меню при изменении ширины экрана
       function handleResize() {
         if (window.innerWidth > 850) {
-          burgerNav.style.display = "none"; // Скрываем бургер-меню
+          burgerNav.style.display = "none";
           burgerNav.classList.remove("active");
-          desktopNav.style.display = "block"; // Показываем обычное меню
+          desktopNav.style.display = "block";
           burgerOpen.style.display = "none";
           burgerClose.style.display = "none";
         } else {
-          burgerNav.style.display = "none"; // Скрываем бургер-меню
-          desktopNav.style.display = "none"; // Скрываем обычное меню
+          burgerNav.style.display = "none";
+          desktopNav.style.display = "none";
           burgerOpen.style.display = "block";
           burgerClose.style.display = "none";
         }
       }
 
-      // Обработчики событий
       burgerButton.addEventListener("click", toggleMenu);
       window.addEventListener("resize", handleResize);
 
-      // Устанавливаем начальное состояние
       handleResize();
     </script>
   </body>
